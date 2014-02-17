@@ -13,12 +13,12 @@
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-servlet</artifactId>
-            <version>7.6.0.v20120127</version>
+            <version>9.1.2.v20140210</version>
         </dependency>
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-webapp</artifactId>
-            <version>7.6.0.v20120127</version>
+            <version>9.1.2.v20140210</version>
         </dependency>
 
         <!-- Jersey -->
@@ -32,6 +32,20 @@
             <artifactId>jersey-json</artifactId>
             <version>1.8</version>
         </dependency>
+<!--
+        <dependency>
+            <groupId>org.glassfish.jersey.containers</groupId>
+            <artifactId>jersey-container-servlet</artifactId>
+            <version>2.5.1</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-client</artifactId>
+            <version>2.5.1</version>
+            <scope>provided</scope>
+        </dependency>
+-->
 
         <!-- jUnit -->
         <dependency>
@@ -40,10 +54,28 @@
             <version>4.10</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- Joda-Time -->
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>2.3</version>
+        </dependency>
+
+
     </dependencies>
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>

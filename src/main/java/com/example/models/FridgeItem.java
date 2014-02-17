@@ -1,7 +1,14 @@
 package com.example.models;
 
-/**
- * Created by tildo on 18/02/2014.
- */
+import javax.xml.bind.annotation.XmlRootElement;
+import java.util.Date;
+
+@XmlRootElement
 public class FridgeItem {
+
+    private String item;
+    private int amount;
+    private Unit unit;
+    private Date useBy;
+
 }
