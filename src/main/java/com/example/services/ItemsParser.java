@@ -22,7 +22,9 @@ public final class ItemsParser {
         int currentRow = 0;
 
         try (CSVReader reader = new CSVReader(new StringReader(items))) {
-            for (String[] nextItem = reader.readNext(); nextItem != null; currentRow++) {
+            String[] nextItem;
+            while((nextItem = reader.readNext()) != null) {
+                currentRow++;
                 FridgeItem fridgeItem = ItemParser.parseFridgeItem(nextItem);
                 fridgeItems.add(fridgeItem);
             }

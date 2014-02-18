@@ -2,33 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e07b215-42e1-4822-b172-f5961671b8d7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/example/repository/FridgeRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/example/repository/FridgeRepositoryTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/example/services/FridgeService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/example/services/FridgeServiceTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/example/models/Item.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/example/services/ItemParser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/example/services/ItemsParser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_beust_jcommander_1_27.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_16_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_opencsv_opencsv_2_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_beanshell_bsh_2_0b4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_easytesting_fest_assert_core_2_0M10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_easytesting_fest_util_1_2_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_testng_testng_6_8_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/example/services/ParseItemTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/example/repository/RecipesRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/com/example/models/TimeTest.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/models/FridgeItem.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/models/FridgeItem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_10.xml" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/example/services/FridgeServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/example/services/FridgeServiceTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/services/ItemsParser.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/services/ItemsParser.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jax-rs-heroku.iml" afterPath="$PROJECT_DIR$/jax-rs-heroku.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -85,6 +64,23 @@
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <line_breakpoints>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/com/example/services/FridgeService.java" line="23" class="com.example.services.FridgeService" package="com.example.services">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -96,11 +92,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5090278">
       <split-first>
         <leaf>
-          <file leaf-file-name="ItemsParser.java" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="ItemsParser.java" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/example/services/ItemsParser.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="731">
-                  <caret line="16" column="27" selection-start="425" selection-end="425" />
+                <state vertical-scroll-proportion="0.91013384" vertical-offset="0" max-vertical-offset="765">
+                  <caret line="28" column="0" selection-start="902" selection-end="902" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -133,8 +129,8 @@
           <file leaf-file-name="FridgeService.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/example/services/FridgeService.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
-                  <caret line="21" column="16" selection-start="446" selection-end="446" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="104" max-vertical-offset="578">
+                  <caret line="26" column="5" selection-start="594" selection-end="594" />
                   <folding />
                 </state>
               </provider>
@@ -152,11 +148,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pom.xml">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.80484694" vertical-offset="1494" max-vertical-offset="2278">
-                  <caret line="125" column="18" selection-start="4120" selection-end="4120" />
+                <state vertical-scroll-proportion="-19.038462" vertical-offset="1630" max-vertical-offset="2414">
+                  <caret line="125" column="20" selection-start="4146" selection-end="4146" />
                   <folding />
                 </state>
               </provider>
@@ -201,8 +197,8 @@
           <file leaf-file-name="FridgeServiceTest.java" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/test/java/com/example/services/FridgeServiceTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.42857143" vertical-offset="0" max-vertical-offset="833">
-                  <caret line="21" column="10" selection-start="474" selection-end="474" />
+                <state vertical-scroll-proportion="0.77838826" vertical-offset="0" max-vertical-offset="578">
+                  <caret line="25" column="9" selection-start="692" selection-end="692" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -246,13 +242,14 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/services/FridgeService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/services/ParseItems.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/services/ParseItem.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/example/services/FridgeServiceTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/repository/FridgeRepository.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/example/services/ParseItemTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/models/Item.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/models/FridgeItem.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/example/repository/FridgeRepositoryTest.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/services/ItemsParser.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/example/services/FridgeServiceTest.java" />
       </list>
     </option>
   </component>
@@ -646,7 +643,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="FullScreen" value="true" />
     <property name="full.screen.before.presentation.mode" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="generate&#9;null&#9;null&#10;genera&#9;null&#9;null&#10;hash&#9;null&#9;null&#10;static&#9;null&#9;null&#10;duplicate&#9;null&#9;null&#10;reformat&#9;null&#9;null&#10;format&#9;null&#9;null&#10;opti&#9;null&#9;null&#10;imports&#9;null&#9;null&#10;getter&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="static&#9;null&#9;null&#10;generate&#9;null&#9;null&#10;genera&#9;null&#9;null&#10;hash&#9;null&#9;null&#10;duplicate&#9;null&#9;null&#10;reformat&#9;null&#9;null&#10;format&#9;null&#9;null&#10;opti&#9;null&#9;null&#10;imports&#9;null&#9;null&#10;getter&#9;null&#9;null" />
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
     <property name="LayoutCode.rearrangeEntriesJava" value="true" />
@@ -659,7 +656,7 @@
       <recent name="com.example.models" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.FridgeRepositoryTest">
+  <component name="RunManager" selected="TestNG.FridgeServiceTest">
     <configuration default="false" name="FridgeServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="jax-rs-heroku" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -767,6 +764,41 @@
       <listeners />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="52121" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="FridgeServiceTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="jax-rs-heroku" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="com.example.services" />
+      <option name="MAIN_CLASS_NAME" value="com.example.services.FridgeServiceTest" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="53561" />
         <option name="TRANSPORT" value="0" />
         <option name="LOCAL" value="true" />
       </RunnerSettings>
@@ -965,18 +997,20 @@
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.FridgeServiceTest" />
       <item index="1" class="java.lang.String" itemvalue="TestNG.ParseItemTest" />
       <item index="2" class="java.lang.String" itemvalue="TestNG.FridgeRepositoryTest.update_shouldRemoveItems_BeforeAddingNewOnes" />
       <item index="3" class="java.lang.String" itemvalue="TestNG.FridgeRepositoryTest" />
+      <item index="4" class="java.lang.String" itemvalue="TestNG.FridgeServiceTest" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="TestNG.FridgeRepositoryTest" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.FridgeRepositoryTest.update_shouldRemoveItems_BeforeAddingNewOnes" />
-        <item index="2" class="java.lang.String" itemvalue="TestNG.ParseItemTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.FridgeServiceTest" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="TestNG.FridgeServiceTest" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.FridgeRepositoryTest" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG.FridgeRepositoryTest.update_shouldRemoveItems_BeforeAddingNewOnes" />
+        <item index="3" class="java.lang.String" itemvalue="TestNG.ParseItemTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.FridgeServiceTest" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -1009,7 +1043,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891566" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -1029,8 +1063,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="true" weight="0.31875" sideWeight="0.5" order="0" side_tool="true" content_ui="combo" x="551" y="23" width="337" height="853" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32837528" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.31875" sideWeight="0.5" order="0" side_tool="true" content_ui="combo" x="551" y="23" width="337" height="853" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32837528" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1348,28 +1382,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/services/FridgeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
-          <caret line="21" column="16" selection-start="446" selection-end="446" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/services/ItemParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="193" max-vertical-offset="1003">
           <caret line="41" column="1" selection-start="1377" selection-end="1499" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/services/ItemsParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="731">
-          <caret line="16" column="27" selection-start="425" selection-end="425" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1432,16 +1448,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.80484694" vertical-offset="1494" max-vertical-offset="2278">
-          <caret line="125" column="18" selection-start="4120" selection-end="4120" />
+        <state vertical-scroll-proportion="-19.038462" vertical-offset="1630" max-vertical-offset="2414">
+          <caret line="125" column="20" selection-start="4146" selection-end="4146" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/services/FridgeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="104" max-vertical-offset="578">
+          <caret line="26" column="5" selection-start="594" selection-end="594" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/services/ItemsParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.91013384" vertical-offset="0" max-vertical-offset="765">
+          <caret line="28" column="0" selection-start="902" selection-end="902" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/example/services/FridgeServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42857143" vertical-offset="0" max-vertical-offset="833">
-          <caret line="21" column="10" selection-start="474" selection-end="474" />
+        <state vertical-scroll-proportion="0.77838826" vertical-offset="0" max-vertical-offset="578">
+          <caret line="25" column="9" selection-start="692" selection-end="692" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -1,12 +1,11 @@
 package com.example.services;
 
-import static org.fest.assertions.api.Assertions.*;
-
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
+
+import static org.fest.assertions.api.Fail.fail;
 
 public class FridgeServiceTest {
 
@@ -24,5 +23,6 @@ public class FridgeServiceTest {
                             "cheese,10,slices,25/12/2014, unexpected-column";
 
         service.addItems(invalidCsv);
+        fail("Adding items should have failed!");
     }
 }
