@@ -29,13 +29,20 @@ It was started using the Heroku template for JAX-RS.
 
 ### Frameworks
 
-- [Jersey - RESTful Web Services in Java](https://jersey.java.net/)
+Server:
+
 - [Jetty - Servlet Engine and HTTP Server](http://www.eclipse.org/jetty/)
+- [Jersey - RESTful Web Services in Java](https://jersey.java.net/)
 
+Test:
 
-### Target platform
+- [TestNG](http://testng.org/)
+- [AssertJ - Fluent assertions for java](http://joel-costigliola.github.io/assertj/index.html)
+
+### Target platforms
 
 - [Heroku](https://www.heroku.com/)
+- Java stand alone application
 
 
 ### Minimum requirements

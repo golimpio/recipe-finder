@@ -4,7 +4,7 @@ import com.example.models.FridgeItem;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import static org.fest.assertions.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class ParseItemTest {
 

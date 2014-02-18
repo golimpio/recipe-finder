@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-import static org.fest.assertions.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class FridgeRepositoryTest {
 
@@ -36,7 +36,7 @@ public class FridgeRepositoryTest {
 
     @BeforeMethod
     public void init() {
-        repository = FridgeRepository.fridge();
+        repository = FridgeRepository.instance();
     }
 
     @Test
@@ -55,5 +55,14 @@ public class FridgeRepositoryTest {
         repository.update(ITEMS_THREE);
         List<FridgeItem> items = repository.get();
         assertThat(items).hasSize(2).contains(ITEMS_THREE.get(0)).contains(ITEMS_THREE.get(2));
+    }
+
+    @Test
+    public void removeAll_shouldClearTheRepository() {
+        repository.update(ITEMS_ONE);
+        assertThat(repository.get()).hasSize(2);
+
+        repository.removeAll();
+        assertThat(repository.get()).isEmpty();
     }
 }

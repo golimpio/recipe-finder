@@ -13,7 +13,7 @@ public final class FridgeRepository {
 
     private FridgeRepository() {}
 
-    public static FridgeRepository fridge() {
+    public static FridgeRepository instance() {
         if (repository == null) repository = new FridgeRepository();
         return repository;
     }
@@ -21,11 +21,15 @@ public final class FridgeRepository {
     public synchronized void update(List<FridgeItem> items) {
 
         // Previous items are removed from the collection every time we update it.
-        fridgeItems.clear();
+        removeAll();
 
         // Duplicated items are overridden
         for (FridgeItem item : items)
             fridgeItems.put(item.getItem(), item);
+    }
+
+    public synchronized void removeAll() {
+        fridgeItems.clear();
     }
 
     public synchronized List<FridgeItem> get() {
