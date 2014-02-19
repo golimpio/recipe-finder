@@ -66,9 +66,9 @@ Alternatively, there is a *run* script at the project root folder:
 
 ## API
 
-This application provides a basic REST API, which can be accessed on:
+The REST API, which can be accessed from:
 
-	http://localhost:8080/services
+	http://recipe-finder.herokuapp.com/services
 
 There are two available services, both expose two operations (they all return JSON):
 
@@ -87,7 +87,7 @@ The following topics show how to access the API from the command line.
 
 **Request:**
 
-	curl -X POST -H "Content-Type: text/plain" -d $'bread,10,slices,25/12/2014\ncheese,5,slices,3/2/2015' http://localhost:8080/services/fridge/add
+	curl -X POST -H "Content-Type: text/plain" -d $'bread,10,slices,25/12/2014\ncheese,5,slices,3/2/2015' http://recipe-finder.herokuapp.com/services/fridge/add
 
 The **response** will be a JSON with a suggestion for dinner:
 
@@ -126,7 +126,7 @@ Sending an invalid content will result on a status ***400** (Bad Request)* with 
 
 **Request:**
 
-	curl -X GET -H "Content-Type: application/json" http://localhost:8080/services/fridge
+	curl -X GET -H "Content-Type: application/json" http://recipe-finder.herokuapp.com/services/fridge
 
 **Response:**
 
@@ -145,13 +145,57 @@ Sending an invalid content will result on a status ***400** (Bad Request)* with 
 	    }
 	]
 
+
 ### Add new recipes
 
 **Request:**
 
-	curl -X POST -H "Content-Type: application/json" -d $'[ { "name": "grilled cheese on toast", "ingredients": [ { "item":"bread", "amount":"11112", "unit":"slices"}, { "item":"cheese", "amount":"2", "unit":"slices"} ] } , { "name": "salad sandwich", "ingredients": [ { "item":"bread", "amount":"2", "unit":"slices"}, { "item":"mixed salad", "amount":"100", "unit":"grams"} ] } ]' http://localhost:8080/services/recipes/add
+	curl -X POST -H "Content-Type: application/json" -d $'[ { "name": "grilled cheese on toast", "ingredients": [ { "item":"bread", "amount":"2", "unit":"slices"}, { "item":"cheese", "amount":"2", "unit":"slices"} ] } , { "name": "salad sandwich", "ingredients": [ { "item":"bread", "amount":"2", "unit":"slices"}, { "item":"mixed salad", "amount":"100", "unit":"grams"} ] } ]' http://recipe-finder.herokuapp.com/services/recipes/add
 
 The **response** will be the same as described for the fridge service.
+
+
+### List all recipes
+
+**Request:**
+
+	curl -X GET -H "Content-Type: application/json" http://recipe-finder.herokuapp.com/services/recipes
+
+**Response:**
+
+	[
+	    {
+	        "name": "grilled cheese on toast",
+	        "ingredients": [
+	            {
+	                "item": "bread",
+	                "amount": 2,
+	                "unit": "slices"
+	            },
+	            {
+	                "item": "cheese",
+	                "amount": 2,
+	                "unit": "slices"
+	            }
+	        ]
+	    },
+	    {
+	        "name": "salad sandwich",
+	        "ingredients": [
+	            {
+	                "item": "bread",
+	                "amount": 2,
+	                "unit": "slices"
+	            },
+	            {
+	                "item": "mixed salad",
+	                "amount": 100,
+	                "unit": "grams"
+	            }
+	        ]
+	    }
+	]
+
 
 ### Sending a file instead
 
@@ -159,11 +203,11 @@ For example, sending fridge items from a file located at ‘*/tmp/items.txt*’
 
 **Request:**
 
-	curl -X POST -H "Content-Type:text/plain" --data-binary "$(</tmp/items.txt)" http://localhost:8080/services/fridge/add
+	curl -X POST -H "Content-Type:text/plain" --data-binary "$(</tmp/items.txt)" http://recipe-finder.herokuapp.com/services/fridge/add
 
 Sending recipes from a file located at ‘*/tmp/recipes.json*’
 
 **Request:**
 
-	curl -X POST -H "Content-Type:application/json" --data-binary "$(</tmp/recipes.json)" http://localhost:8080/services/recipes/add
+	curl -X POST -H "Content-Type:application/json" --data-binary "$(</tmp/recipes.json)" http://recipe-finder.herokuapp.com/services/recipes/add
 
