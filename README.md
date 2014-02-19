@@ -82,9 +82,9 @@ There are two available services, both expose two operations:
 If the request succeeds, the response’s content type will be *JSON*.
 
 
-### Examples
+### Command line interface
 
-The following topics show how to access the API from the command line.
+The simplest way to access the service API from the command line is via CURL (a command line tool for transferring data with URL syntax).
 
 
 #### Add new items to the fridge
