@@ -1,26 +1,27 @@
 package com.example.models;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import org.joda.time.LocalDate;
 
-import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Date;
 
 public class FridgeItem extends Item {
 
-    private LocalDate useBy;
+    private Date useBy;
 
     public FridgeItem(String item, int amount, Unit unit, LocalDate useBy) {
         setItem(item);
         setAmount(amount);
         setUnit(unit);
-        setUseBy(useBy);
+        setUseBy(useBy.toDate());
     }
 
-    public LocalDate getUseBy() {
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "d/M/yyyy")
+    public Date getUseBy() {
         return useBy;
     }
 
-    public void setUseBy(LocalDate useBy) {
+    public void setUseBy(Date useBy) {
         this.useBy = useBy;
     }
 

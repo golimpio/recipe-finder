@@ -1,6 +1,5 @@
 package com.example.repository;
 
-import com.example.models.FridgeItem;
 import com.example.models.Recipe;
 
 import java.util.ArrayList;
@@ -37,7 +36,7 @@ public class RecipesRepository {
         return new ArrayList<>(recipes.values());
     }
 
-    public Recipe find(List<FridgeItem> fridgeItems) {
-        return null;
+    public synchronized boolean isEmpty() {
+        return recipes.isEmpty();
     }
 }

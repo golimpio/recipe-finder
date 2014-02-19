@@ -36,4 +36,11 @@ public final class FridgeRepository {
         return new ArrayList<>(fridgeItems.values());
     }
 
+    public synchronized FridgeItem getItem(String name) {
+        return fridgeItems.get(name);
+    }
+
+    public synchronized boolean isEmpty() {
+        return fridgeItems.isEmpty();
+    }
 }
