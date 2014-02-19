@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/underscore-min.js"></script>
   </head>
 
   <body>
@@ -31,32 +32,22 @@
     </div>
 
     <script src="js/bootstrap.min.js"></script>
-
+    <script src="js/main.js"></script>
     <script>
       loadMainFragment();
-
-      function loadMainFragment() {
-        $("#new-body").empty();
-        $("#new-body").load("main-body.html");
-      }
-
-      function loadFridgeFragment() {
-        $("#new-body").empty();
-        $("#new-body").load("fridge-body.html", function() {
-          loadItems();
-        });
-      }
-
-      function loadRecipesFragment() {
-        $("#new-body").empty();
-        $("#new-body").load("recipes-body.html");
-      }
-
-      function loadItems() {
-        $("#load-items").hide();
-
-        $("#items").show();
-      }
     </script>
+
+    <script id="itemsTemplate" type="text/html">
+        <% for(var i = 0; i < itemsList.length; i++) { %>
+        <% var item = itemsList[i]; %>
+        <tr>
+          <td><%= item.item %></td>
+          <td><%= item.amount %></td>
+          <td><%= item.unit %></td>
+          <td><%= item.useBy %></td>
+        </tr>
+        <% } %>
+    </script>
+
   </body>
 </html>
