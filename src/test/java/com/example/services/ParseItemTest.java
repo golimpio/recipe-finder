@@ -8,12 +8,22 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class ParseItemTest {
 
+    @Test(expectedExceptions = NullPointerException.class)
+    public void parseFridgeItem_ShouldThrowException_WhenItemArgumentIsNull() {
+        ItemParser.parseFridgeItem(null);
+    }
+
     @DataProvider
     private static Object[][] itemsWithInvalidNumberOfColumns() {
         return new Object[][] {
                 new Object[] {"bread,10,slices"},
                 new Object[] {"bread,10,slices,25/12/2014,25/12/2014"},
         };
+    }
+
+    @Test(dataProvider = "itemsWithInvalidNumberOfColumns", expectedExceptions = IllegalArgumentException.class)
+    public void parseFridgeItem_ShouldThrowException_WhenNumberOfColumnsDoNotMatch(String[] item) {
+        ItemParser.parseFridgeItem(item);
     }
 
     @DataProvider
@@ -26,6 +36,11 @@ public class ParseItemTest {
         };
     }
 
+    @Test(dataProvider = "itemsWithInvalidField", expectedExceptions = IllegalArgumentException.class)
+    public void parseFridgeItem_ShouldThrowException_WhenItemIsNotValid(String[] item) {
+        ItemParser.parseFridgeItem(item);
+    }
+
     @DataProvider
     private static Object[][] validItems() {
         return new Object[][] {
@@ -36,26 +51,6 @@ public class ParseItemTest {
                 new Object[] {new String[] {"peanut butter",  "250", "grams ", "2/3/2014"}},
                 new Object[] {new String[] {"vanilla extract", "20", " ml", "26/12/2013"}}
         };
-    }
-
-    @Test(expectedExceptions = NullPointerException.class)
-    public void parseFridgeItem_ShouldThrowException_WhenItemArgumentIsNull() {
-        ItemParser.parseFridgeItem(null);
-    }
-
-    @Test(dataProvider = "itemsWithInvalidNumberOfColumns", expectedExceptions = IllegalArgumentException.class)
-    public void parseFridgeItem_ShouldThrowException_WhenNumberOfColumnsDoNotMatch(String[] item) {
-        ItemParser.parseFridgeItem(item);
-    }
-
-    @Test(dataProvider = "itemsWithInvalidField", expectedExceptions = IllegalArgumentException.class)
-    public void parseFridgeItem_ShouldThrowException_WhenItemIsNotValid(String[] item) {
-        ItemParser.parseFridgeItem(item);
-    }
-
-    @Override
-    public String toString() {
-        return super.toString();
     }
 
     @Test(dataProvider = "validItems")

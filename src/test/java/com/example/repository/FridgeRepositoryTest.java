@@ -16,21 +16,18 @@ public class FridgeRepositoryTest {
 
     private static final DateTimeFormatter FORMATTER = DateTimeFormat.forPattern("d/M/yyyy");
 
-    private static final List<FridgeItem> ITEMS_ONE =
-            Lists.newArrayList(
-                    new FridgeItem("bread", 8, Unit.SLICES, FORMATTER.parseLocalDate("25/03/2014")),
-                    new FridgeItem("cheese", 10, Unit.SLICES, FORMATTER.parseLocalDate("13/12/2014")));
+    private static final List<FridgeItem> ITEMS_ONE = Lists.newArrayList(
+            new FridgeItem("bread", 8, Unit.SLICES, FORMATTER.parseLocalDate("25/03/2014")),
+            new FridgeItem("cheese", 10, Unit.SLICES, FORMATTER.parseLocalDate("13/12/2014")));
 
-    private static final List<FridgeItem> ITEMS_TWO =
-            Lists.newArrayList(
-                    new FridgeItem("guava", 8300, Unit.GRAMS, FORMATTER.parseLocalDate("25/03/2014")),
-                    new FridgeItem("rice", 500, Unit.ML, FORMATTER.parseLocalDate("25/12/2015")));
+    private static final List<FridgeItem> ITEMS_TWO = Lists.newArrayList(
+            new FridgeItem("guava", 8300, Unit.GRAMS, FORMATTER.parseLocalDate("25/03/2014")),
+            new FridgeItem("rice", 500, Unit.ML, FORMATTER.parseLocalDate("25/12/2015")));
 
-    private static final List<FridgeItem> ITEMS_THREE =
-            Lists.newArrayList(
-                    new FridgeItem("guava", 8300, Unit.GRAMS, FORMATTER.parseLocalDate("25/03/2014")),
-                    new FridgeItem("rice", 500, Unit.ML, FORMATTER.parseLocalDate("25/12/2015")),
-                    new FridgeItem("rice", 700, Unit.ML, FORMATTER.parseLocalDate("22/12/2015")));
+    private static final List<FridgeItem> ITEMS_THREE = Lists.newArrayList(
+            new FridgeItem("guava", 8300, Unit.GRAMS, FORMATTER.parseLocalDate("25/03/2014")),
+            new FridgeItem("rice", 500, Unit.ML, FORMATTER.parseLocalDate("25/12/2015")),
+            new FridgeItem("rice", 700, Unit.ML, FORMATTER.parseLocalDate("22/12/2015")));
 
     private FridgeRepository repository;
 
@@ -60,9 +57,11 @@ public class FridgeRepositoryTest {
     @Test
     public void removeAll_shouldClearTheRepository() {
         repository.update(ITEMS_ONE);
+        assertThat(repository.isEmpty()).isFalse();
         assertThat(repository.get()).hasSize(2);
 
         repository.removeAll();
+        assertThat(repository.isEmpty()).isTrue();
         assertThat(repository.get()).isEmpty();
     }
 }

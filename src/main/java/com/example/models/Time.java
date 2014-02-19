@@ -7,7 +7,7 @@ import java.util.TimeZone;
 @XmlRootElement
 public class Time {
 
-    private String timezone;
+    private final String timezone;
     private final int year;
     private final int month;
     private final int day;

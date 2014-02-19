@@ -19,7 +19,7 @@ class ResponseHelper {
 
     public static RecipeResponse getRecipe() {
         return FridgeRepository.instance().isEmpty() ? fridgeIsEmpty()
-                : RecipesRepository.instance().isEmpty() ? takeOut()
+                : RecipesRepository.instance().isEmpty() ? takeout()
                 : findRecipe();
     }
 
@@ -27,7 +27,7 @@ class ResponseHelper {
         return new RecipeResponse("Fridge is empty");
     }
 
-    private static RecipeResponse takeOut() {
+    private static RecipeResponse takeout() {
         return new RecipeResponse("Order Takeout");
     }
 
@@ -43,7 +43,7 @@ class ResponseHelper {
 
             for (Item ingredient : recipe.getIngredients()) {
                 FridgeItem fridgeItem = FridgeRepository.instance().getItem(ingredient.getItem());
-                if (!isValid(fridgeItem, recipeFound)) {
+                if (!isValid(fridgeItem, ingredient, recipeFound)) {
                     foundRecipe = false;
                     break;
                 }
@@ -53,13 +53,15 @@ class ResponseHelper {
                 recipesFound.add(recipeFound);
         }
 
-        return recipesFound.isEmpty() ? takeOut()
+        return recipesFound.isEmpty() ? takeout()
                 : recipesFound.size() == 1 ? suggestedRecipe(recipesFound.get(0).recipe)
                 : findBestMatch(recipesFound);
     }
 
-    private static boolean isValid(FridgeItem item, RecipeFound recipeFound) {
-        if (item == null)
+    private static boolean isValid(FridgeItem item, Item ingredient, RecipeFound recipeFound) {
+        if (item == null
+                || !item.getUnit().equals(ingredient.getUnit())
+                || item.getAmount() < ingredient.getAmount())
             return false;
 
         LocalDate today = new LocalDate();

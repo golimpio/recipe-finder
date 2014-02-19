@@ -1,6 +1,5 @@
 package com.example.services;
 
-import com.example.models.FridgeItem;
 import com.example.models.Recipe;
 import com.example.models.RecipeResponse;
 import com.example.repository.RecipesRepository;
@@ -10,7 +9,6 @@ import org.slf4j.LoggerFactory;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.io.IOException;
 import java.util.List;
 
 import static javax.ws.rs.core.Response.Status;
@@ -29,7 +27,7 @@ public class RecipesService {
     @POST @Path("/add")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.TEXT_PLAIN)
-    public RecipeResponse add(List<Recipe> recipes) throws IOException {
+    public RecipeResponse add(List<Recipe> recipes) {
         LOGGER.info("Adding recipes: [{}]", recipes);
 
         try {

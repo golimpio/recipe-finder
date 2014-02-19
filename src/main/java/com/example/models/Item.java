@@ -9,6 +9,15 @@ public class Item {
     private int amount;
     private Unit unit;
 
+    public Item() {
+    }
+
+    public Item(String item, int amount, Unit unit) {
+        setItem(item);
+        setAmount(amount);
+        setUnit(unit);
+    }
+
     public String getItem() {
         return item;
     }

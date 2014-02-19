@@ -4,7 +4,6 @@ import com.example.models.FridgeItem;
 import com.example.models.Item;
 import com.example.models.Unit;
 import com.google.common.base.Splitter;
-import com.google.common.base.Strings;
 import org.joda.time.LocalDate;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
@@ -23,11 +22,10 @@ final class ItemParser {
 
         checkArgument(columns.length == 4, "Item should have exactly 4 fields: %s", Arrays.toString(columns));
 
-        FridgeItem fridgeItem = new FridgeItem(nullToEmpty(columns[0]).trim(),
-                                               getAmount(nullToEmpty(columns[1]).trim()),
-                                               getUnit(nullToEmpty(columns[2]).trim()),
-                                               getDate(nullToEmpty(columns[3]).trim()));
-        return fridgeItem;
+        return new FridgeItem(nullToEmpty(columns[0]).trim(),
+                                          getAmount(nullToEmpty(columns[1]).trim()),
+                                          getUnit(nullToEmpty(columns[2]).trim()),
+                                          getDate(nullToEmpty(columns[3]).trim()));
     }
 
     private static int getAmount(String amount) {
