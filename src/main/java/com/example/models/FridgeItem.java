@@ -16,7 +16,7 @@ public class FridgeItem extends Item {
         setUseBy(useBy.toDate());
     }
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "d/M/yyyy")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "d/M/yyyy", locale = "en_AU", timezone = "Australia/Sydney")
     public Date getUseBy() {
         return useBy;
     }

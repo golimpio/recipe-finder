@@ -66,5 +66,104 @@ Alternatively, there is a *run* script at the project root folder:
 
 ## API
 
+This application provides a basic REST API, which can be accessed on:
 
+	http://localhost:8080/services
+
+There are two available services, both expose two operations (they all return JSON):
+
+1. **fridge** (list stored items - *GET*)
+2. **fridge/add** (add new items to the fridge, replacing the existing ones - *POST*)
+3. **recipes** (list available recipes - *GET*)
+4. **recipes/add** (add new recipes to the fridge, replacing the existing ones - *POST*)
+
+
+### Examples
+
+The following topics show how to access the API from the command line.
+
+
+#### Add new items to the fridge
+
+**Request:**
+
+	curl -X POST -H "Content-Type: text/plain" -d $'bread,10,slices,25/12/2014\ncheese,5,slices,3/2/2015' http://localhost:8080/services/fridge/add
+
+The **response** will be a JSON with a suggestion for dinner:
+
+	{
+	    "message": "Suggestion for dinner",
+	    "recipe": {
+	        "name": "grilled cheese on toast",
+	        "ingredients": [
+	            {
+	                "item": "bread",
+	                "amount": 2,
+	                "unit": "slices"
+	            },
+	            {
+	                "item": "cheese",
+	                "amount": 2,
+	                "unit": "slices"
+	            }
+	        ]
+	    }
+	}
+
+If there is no match for the ingredients in the fridge, a *null* recipe will be returned, e.g.
+
+	{
+	    "message": "Order Takeout",
+	    "recipe": null
+	}
+
+Sending an invalid content will result on a status ***400** (Bad Request)* with the follow message:
+
+	Failed to parse line 2. Item should have exactly 4 fields: [cheese, 5, slices, 3/2/2015, xxx]
+
+
+### List items added to the fridge
+
+**Request:**
+
+	curl -X GET -H "Content-Type: application/json" http://localhost:8080/services/fridge
+
+**Response:**
+
+	[
+	    {
+	        "item": "bread",
+	        "amount": 10,
+	        "unit": "slices",
+	        "useBy": "25/12/2014"
+	    },
+	    {
+	        "item": "cheese",
+	        "amount": 5,
+	        "unit": "slices",
+	        "useBy": "3/2/2015"
+	    }
+	]
+
+### Add new recipes
+
+**Request:**
+
+	curl -X POST -H "Content-Type: application/json" -d $'[ { "name": "grilled cheese on toast", "ingredients": [ { "item":"bread", "amount":"11112", "unit":"slices"}, { "item":"cheese", "amount":"2", "unit":"slices"} ] } , { "name": "salad sandwich", "ingredients": [ { "item":"bread", "amount":"2", "unit":"slices"}, { "item":"mixed salad", "amount":"100", "unit":"grams"} ] } ]' http://localhost:8080/services/recipes/add
+
+The **response** will be the same as described for the fridge service.
+
+### Sending a file instead
+
+For example, sending fridge items from a file located at ‘*/tmp/items.txt*’
+
+**Request:**
+
+	curl -X POST -H "Content-Type:text/plain" --data-binary "$(</tmp/items.txt)" http://localhost:8080/services/fridge/add
+
+Sending recipes from a file located at ‘*/tmp/recipes.json*’
+
+**Request:**
+
+	curl -X POST -H "Content-Type:application/json" --data-binary "$(</tmp/recipes.json)" http://localhost:8080/services/recipes/add
 

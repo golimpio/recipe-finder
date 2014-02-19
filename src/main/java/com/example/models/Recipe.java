@@ -9,6 +9,8 @@ public class Recipe {
     private String name;
     private List<Item> ingredients;
 
+    public Recipe() {}
+
     public Recipe(String name, List<Item> items) {
         setName(name);
         setIngredients(items);
