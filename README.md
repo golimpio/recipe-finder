@@ -22,9 +22,7 @@ Given a list of items in the fridge (presented as a csv list), and a collection 
 
 ## Application
 
-This application provides a lightweight RESTful API using the Java API for RESTful Web Services (JAX-RS) on top of an embedded Jetty.
-
-It was started using the Heroku template for JAX-RS.
+This application provides a lightweight RESTful API using the Java API for RESTful Web Services (JAX-RS) on top of an embedded Jetty (based on the Heroku template for JAX-RS).
 
 
 ### Frameworks
@@ -37,7 +35,7 @@ Server:
 Test:
 
 - [TestNG](http://testng.org/)
-- [AssertJ - Fluent assertions for java](http://joel-costigliola.github.io/assertj/index.html)
+- [AssertJ - Fluent assertions for Java](http://joel-costigliola.github.io/assertj/index.html)
 
 ### Target platforms
 
@@ -48,17 +46,22 @@ Test:
 ### Minimum requirements
 
 - Java 7
+- Maven 3
 
 
 ### Running the application locally
 
 First build with:
 
-    $ mvn clean install
+    $ mvn clean package
 
 Then run it with:
 
     $ mvn exec:java -Dexec.mainClass="com.example.Main"
+    
+Alternatively, there is a *run* script at the project root folder:
+
+	$ ./run
 
 
 ## API

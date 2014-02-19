@@ -4,6 +4,7 @@ import com.example.repository.FridgeRepository;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import javax.ws.rs.WebApplicationException;
 import java.io.IOException;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -20,7 +21,7 @@ public class FridgeServiceTest {
         FridgeRepository.instance().removeAll();
     }
 
-    @Test(expectedExceptions = IllegalArgumentException.class)
+    @Test(expectedExceptions = WebApplicationException.class)
     public void addItems_shouldThrowAnException_WhenCsvIsInvalid() throws IOException {
         String invalidCsv = "bread,10,slices,25/12/2014\n" +
                             "cheese,10,slices,25/12/2014, unexpected-column";

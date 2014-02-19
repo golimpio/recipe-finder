@@ -1,8 +1,9 @@
 package com.example.services;
 
 import com.example.models.FridgeItem;
+import com.example.models.Recipe;
 import com.example.models.RecipeResponse;
-import com.example.repository.FridgeRepository;
+import com.example.repository.RecipesRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,26 +15,25 @@ import java.util.List;
 
 import static javax.ws.rs.core.Response.Status;
 
-@Path("/fridge")
-@Consumes(MediaType.APPLICATION_JSON)
-@Produces(MediaType.APPLICATION_JSON)
-public class FridgeService {
+@Path("/recipes")
+public class RecipesService {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(FridgeService.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(RecipesService.class);
 
     @GET
-    public List<FridgeItem> get() {
-        return FridgeRepository.instance().get();
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<Recipe> get() {
+        return RecipesRepository.instance().get();
     }
 
     @POST @Path("/add")
-    @Consumes(MediaType.TEXT_PLAIN)
-    public RecipeResponse addItems(String items) throws IOException {
-        LOGGER.info("Adding items: [{}]", items);
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.TEXT_PLAIN)
+    public RecipeResponse add(List<Recipe> recipes) throws IOException {
+        LOGGER.info("Adding recipes: [{}]", recipes);
 
         try {
-            List<FridgeItem> fridgeItems = ItemsParser.parseFridgeItems(items);
-            FridgeRepository.instance().update(fridgeItems);
+            RecipesRepository.instance().update(recipes);
         } catch(IllegalArgumentException e) {
             throw new WebApplicationException(Response.status(Status.BAD_REQUEST).entity(e.getMessage()).build());
         }
@@ -44,4 +44,6 @@ public class FridgeService {
     public void uploadItems() {
 
     }
+
 }
+
