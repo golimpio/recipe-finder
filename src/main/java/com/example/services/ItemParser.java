@@ -1,15 +1,12 @@
 package com.example.services;
 
 import com.example.models.FridgeItem;
-import com.example.models.Item;
 import com.example.models.Unit;
-import com.google.common.base.Splitter;
 import org.joda.time.LocalDate;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
 import java.util.Arrays;
-import java.util.List;
 
 import static com.google.common.base.Preconditions.checkArgument;
 import static com.google.common.base.Strings.nullToEmpty;
@@ -39,13 +36,5 @@ final class ItemParser {
     private static LocalDate getDate(String date) {
         DateTimeFormatter formatter = DateTimeFormat.forPattern("d/M/yyyy");
         return formatter.parseLocalDate(date);
-    }
-
-    private static List<String> toList(String item) {
-        return Splitter.on(',').trimResults().splitToList(item);
-    }
-
-    public static Item parseItem(String item) {
-        return null;
     }
 }

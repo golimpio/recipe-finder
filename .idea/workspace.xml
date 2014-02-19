@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4e07b215-42e1-4822-b172-f5961671b8d7" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/models/FridgeItem.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/models/FridgeItem.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/services/FridgeService.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/services/FridgeService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/services/ItemParser.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/services/ItemParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/models/Recipe.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/models/Recipe.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/services/RecipesService.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/services/RecipesService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/example/models/Unit.java" afterPath="$PROJECT_DIR$/src/main/java/com/example/models/Unit.java" />
@@ -93,7 +96,7 @@
             <entry file="file://$PROJECT_DIR$/src/main/java/com/example/models/FridgeItem.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
-                  <caret line="34" column="0" selection-start="807" selection-end="807" />
+                  <caret line="23" column="16" selection-start="588" selection-end="588" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#541#542#0" expanded="true" />
@@ -105,11 +108,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="RecipesService.java" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="RecipesService.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/example/services/RecipesService.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.24444444" vertical-offset="74" max-vertical-offset="884">
-                  <caret line="16" column="25" selection-start="421" selection-end="421" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
+                  <caret line="40" column="0" selection-start="1119" selection-end="1119" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -120,7 +123,7 @@
           <file leaf-file-name="Time.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/example/models/Time.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="4" max-vertical-offset="901">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
                   <caret line="25" column="26" selection-start="627" selection-end="627" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -132,8 +135,8 @@
           <file leaf-file-name="FridgeRepository.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/example/repository/FridgeRepository.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="446" max-vertical-offset="884">
-                  <caret line="35" column="51" selection-start="1008" selection-end="1028" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
+                  <caret line="31" column="28" selection-start="920" selection-end="920" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -144,8 +147,8 @@
           <file leaf-file-name="FridgeService.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/example/services/FridgeService.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="91" max-vertical-offset="901">
-                  <caret line="28" column="10" selection-start="732" selection-end="732" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="833">
+                  <caret line="28" column="4" selection-start="726" selection-end="726" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -174,6 +177,19 @@
                     <element signature="imports" expanded="true" />
                   </folding>
                 </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/README.md">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.95530015" vertical-offset="17" max-vertical-offset="4505">
+                  <caret line="45" column="0" selection-start="899" selection-end="899" />
+                  <folding />
+                </state>
+              </provider>
+              <provider editor-type-id="MarkdownPreviewEditor">
+                <state />
               </provider>
             </entry>
           </file>
@@ -234,8 +250,8 @@
           <file leaf-file-name="FridgeRepositoryTest.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/test/java/com/example/repository/FridgeRepositoryTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="431" max-vertical-offset="1241">
-                  <caret line="30" column="0" selection-start="1407" selection-end="1407" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="1241">
+                  <caret line="34" column="16" selection-start="1484" selection-end="1484" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -243,10 +259,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ResponseHelperTest.java" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="ResponseHelperTest.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/test/java/com/example/services/ResponseHelperTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.12592593" vertical-offset="0" max-vertical-offset="2448">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2448">
                   <caret line="6" column="36" selection-start="225" selection-end="225" />
                   <folding />
                 </state>
@@ -257,7 +273,7 @@
             <entry file="file://$PROJECT_DIR$/src/main/java/com/example/models/Unit.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
-                  <caret line="18" column="0" selection-start="385" selection-end="385" />
+                  <caret line="5" column="12" selection-start="146" selection-end="146" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -265,11 +281,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ItemParser.java" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="ItemParser.java" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/example/services/ItemParser.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="969">
-                  <caret line="15" column="0" selection-start="470" selection-end="470" />
+                <state vertical-scroll-proportion="0.54567903" vertical-offset="0" max-vertical-offset="810">
+                  <caret line="26" column="0" selection-start="929" selection-end="929" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -307,11 +323,8 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/repository/RecipesRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/models/RecipeFound.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/services/FridgeService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/models/Time.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/example/services/ParseItemTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/example/services/ItemParser.java" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/test/java/com/example/repository/FridgeRepositoryTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/models/Item.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/services/RecipeFound.java" />
@@ -322,6 +335,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/example/models/Recipe.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/models/Unit.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/services/RecipesService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/services/FridgeService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/example/services/ItemParser.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -694,7 +710,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="FullScreen" value="true" />
     <property name="full.screen.before.presentation.mode" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="move&#9;null&#9;null&#10;coverage&#9;null&#9;null&#10;pom.&#9;FILE&#9;file:///Projects/recipe-finder/pom.xml&#10;static&#9;null&#9;null&#10;web.xml&#9;FILE&#9;file:///Projects/recipe-finder/src/main/webapp/WEB-INF/web.xml&#10;generate&#9;null&#9;null&#10;genera&#9;null&#9;null&#10;hash&#9;null&#9;null&#10;duplicate&#9;null&#9;null&#10;reformat&#9;null&#9;null&#10;format&#9;null&#9;null&#10;opti&#9;null&#9;null&#10;imports&#9;null&#9;null&#10;getter&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="usage&#9;null&#9;null&#10;move&#9;null&#9;null&#10;coverage&#9;null&#9;null&#10;pom.&#9;FILE&#9;file:///Projects/recipe-finder/pom.xml&#10;static&#9;null&#9;null&#10;web.xml&#9;FILE&#9;file:///Projects/recipe-finder/src/main/webapp/WEB-INF/web.xml&#10;generate&#9;null&#9;null&#10;genera&#9;null&#9;null&#10;hash&#9;null&#9;null&#10;duplicate&#9;null&#9;null&#10;reformat&#9;null&#9;null&#10;format&#9;null&#9;null&#10;opti&#9;null&#9;null&#10;imports&#9;null&#9;null&#10;getter&#9;null&#9;null" />
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
     <property name="LayoutCode.rearrangeEntriesJava" value="false" />
@@ -1399,33 +1415,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/services/ItemParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="969">
-          <caret line="15" column="0" selection-start="470" selection-end="470" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.2767857" vertical-offset="1664" max-vertical-offset="2448">
           <caret line="39" column="23" selection-start="1445" selection-end="1445" />
           <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21839081" vertical-offset="866" max-vertical-offset="2006">
-          <caret line="61" column="7" selection-start="1262" selection-end="1262" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/example/services/FridgeServiceTest.java">
@@ -1443,16 +1438,6 @@
         <state vertical-scroll-proportion="0.355414" vertical-offset="248" max-vertical-offset="1224">
           <caret line="32" column="29" selection-start="1375" selection-end="1375" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/example/repository/FridgeRepositoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="431" max-vertical-offset="1241">
-          <caret line="30" column="0" selection-start="1407" selection-end="1407" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1476,28 +1461,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/services/ResponseHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1043" max-vertical-offset="1853">
-          <caret line="74" column="0" selection-start="2490" selection-end="2490" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/models/Item.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="369" max-vertical-offset="867">
-          <caret line="37" column="0" selection-start="644" selection-end="644" />
-          <folding>
-            <element signature="e#445#446#0" expanded="true" />
-            <element signature="e#477#478#0" expanded="true" />
-            <element signature="e#669#670#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-annotations/2.3.0/jackson-annotations-2.3.0.jar!/com/fasterxml/jackson/annotation/JsonFormat.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="6.1153846" vertical-offset="363" max-vertical-offset="1190">
@@ -1506,41 +1469,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/services/ItemsParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
-          <caret line="19" column="0" selection-start="541" selection-end="541" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/repository/FridgeRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="446" max-vertical-offset="884">
-          <caret line="35" column="51" selection-start="1008" selection-end="1028" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.3.0/jackson-databind-2.3.0.jar!/com/fasterxml/jackson/databind/ser/std/DateTimeSerializerBase.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="72" max-vertical-offset="510">
           <caret line="14" column="60" selection-start="791" selection-end="791" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/models/Time.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4" max-vertical-offset="901">
-          <caret line="25" column="26" selection-start="627" selection-end="627" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1581,36 +1514,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/models/FridgeItem.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/ws/rs/javax.ws.rs-api/2.0/javax.ws.rs-api-2.0.jar!/javax/ws/rs/core/MediaType.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
-          <caret line="34" column="0" selection-start="807" selection-end="807" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#541#542#0" expanded="true" />
-            <element signature="e#569#570#0" expanded="true" />
-            <element signature="e#609#610#0" expanded="true" />
-            <element signature="e#643#644#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.34394905" vertical-offset="87" max-vertical-offset="1275">
+          <caret line="22" column="41" selection-start="1272" selection-end="1272" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/services/FridgeService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/services/ResponseHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="91" max-vertical-offset="901">
-          <caret line="28" column="10" selection-start="732" selection-end="732" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1043" max-vertical-offset="1853">
+          <caret line="74" column="0" selection-start="2490" selection-end="2490" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/models/Unit.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/models/Item.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
-          <caret line="18" column="0" selection-start="385" selection-end="385" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="369" max-vertical-offset="867">
+          <caret line="37" column="0" selection-start="644" selection-end="644" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#445#446#0" expanded="true" />
+            <element signature="e#477#478#0" expanded="true" />
+            <element signature="e#669#670#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1625,30 +1554,117 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/example/services/ResponseHelperTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/repository/FridgeRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12592593" vertical-offset="0" max-vertical-offset="2448">
-          <caret line="6" column="36" selection-start="225" selection-end="225" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="74" max-vertical-offset="884">
+          <caret line="31" column="28" selection-start="920" selection-end="920" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/ws/rs/javax.ws.rs-api/2.0/javax.ws.rs-api-2.0.jar!/javax/ws/rs/core/MediaType.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/models/Time.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34394905" vertical-offset="87" max-vertical-offset="1275">
-          <caret line="22" column="41" selection-start="1272" selection-end="1272" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="4" max-vertical-offset="901">
+          <caret line="25" column="26" selection-start="627" selection-end="627" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/services/RecipesService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24444444" vertical-offset="74" max-vertical-offset="884">
-          <caret line="16" column="25" selection-start="421" selection-end="421" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
+          <caret line="40" column="0" selection-start="1119" selection-end="1119" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/services/ItemsParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
+          <caret line="19" column="0" selection-start="541" selection-end="541" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/example/services/ResponseHelperTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2448">
+          <caret line="6" column="36" selection-start="225" selection-end="225" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/models/FridgeItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
+          <caret line="23" column="16" selection-start="588" selection-end="588" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#541#542#0" expanded="true" />
+            <element signature="e#569#570#0" expanded="true" />
+            <element signature="e#609#610#0" expanded="true" />
+            <element signature="e#643#644#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/example/repository/FridgeRepositoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="1241">
+          <caret line="34" column="16" selection-start="1484" selection-end="1484" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/models/Unit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
+          <caret line="5" column="12" selection-start="146" selection-end="146" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/services/FridgeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="833">
+          <caret line="28" column="4" selection-start="726" selection-end="726" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/services/ItemParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.54567903" vertical-offset="0" max-vertical-offset="810">
+          <caret line="26" column="0" selection-start="929" selection-end="929" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.95530015" vertical-offset="17" max-vertical-offset="4505">
+          <caret line="45" column="0" selection-start="899" selection-end="899" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
       </provider>
     </entry>
   </component>

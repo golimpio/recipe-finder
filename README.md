@@ -24,6 +24,8 @@ Given a list of items in the fridge (presented as a csv list), and a collection 
 
 This application provides a lightweight RESTful API using the Java API for RESTful Web Services (JAX-RS) on top of an embedded Jetty (based on the Heroku template for JAX-RS).
 
+A deployed version is running and hosted on: [http://recipe-finder.herokuapp.com/](http://recipe-finder.herokuapp.com/)
+
 
 ### Frameworks
 
@@ -31,11 +33,13 @@ Server:
 
 - [Jetty - Servlet Engine and HTTP Server](http://www.eclipse.org/jetty/)
 - [Jersey - RESTful Web Services in Java](https://jersey.java.net/)
+- [FasterXML - Jackson JAX-RS JSON Provider](https://github.com/FasterXML/jackson-jaxrs-json-provider)
 
 Test:
 
 - [TestNG](http://testng.org/)
 - [AssertJ - Fluent assertions for Java](http://joel-costigliola.github.io/assertj/index.html)
+
 
 ### Target platforms
 
@@ -66,16 +70,16 @@ Alternatively, there is a *run* script at the project root folder:
 
 ## API
 
-The REST API, which can be accessed from:
+The REST API can be accessed from: `http://recipe-finder.herokuapp.com/services`
 
-	http://recipe-finder.herokuapp.com/services
-
-There are two available services, both expose two operations (they all return JSON):
+There are two available services, both expose two operations:
 
 1. **fridge** (list stored items - *GET*)
 2. **fridge/add** (add new items to the fridge, replacing the existing ones - *POST*)
 3. **recipes** (list available recipes - *GET*)
 4. **recipes/add** (add new recipes to the fridge, replacing the existing ones - *POST*)
+
+If the request succeeds, the response’s content type will be *JSON*.
 
 
 ### Examples
@@ -117,7 +121,7 @@ If there is no match for the ingredients in the fridge, a *null* recipe will be 
 	    "recipe": null
 	}
 
-Sending an invalid content will result on a status ***400** (Bad Request)* with the follow message:
+Sending an invalid content will result on a status ***400** (Bad Request)* with the following message:
 
 	Failed to parse line 2. Item should have exactly 4 fields: [cheese, 5, slices, 3/2/2015, xxx]
 

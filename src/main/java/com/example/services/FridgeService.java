@@ -40,8 +40,4 @@ public class FridgeService {
 
         return ResponseHelper.getRecipe();
     }
-
-    public void uploadItems() {
-
-    }
 }

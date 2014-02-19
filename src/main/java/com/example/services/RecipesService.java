@@ -37,10 +37,4 @@ public class RecipesService {
 
         return ResponseHelper.getRecipe();
     }
-
-    public void uploadItems() {
-
-    }
-
 }
-
