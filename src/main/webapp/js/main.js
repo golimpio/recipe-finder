@@ -45,6 +45,7 @@ function loadFridge() {
     posting.done(function(response) {
         $("#fridgeInfoMessage").html(response.message);
         $("#fridgeInfo").show();
+        $("#fridgeTextArea").val("");
     });
 
     posting.fail(function(xhr) {
@@ -68,18 +69,27 @@ function loadRecipes() {
     disableRecipesLoadButton(true);
 
     var data = $("#recipesTextArea").val()
-var obj = jQuery.parseJSON( '{ "name": "John" }' );
-alert( obj.name === "John" )
+    try {
+        var json = jQuery.parseJSON(data);
+    } catch(err) {
+        $("#recipeErrorMessage").html(err.message);
+        $("#recipeError").show();
+        disableRecipesLoadButton(false);
+        return false;
+    }
+
     var posting = $.ajax({
-        type: "POST",
         url: "services/recipes/add",
+        type: "POST",
         data: data,
-        contentType: "application/jspn",
+        dataType: "json",
+        contentType: "application/json"
     });
 
     posting.done(function(response) {
         $("#recipeInfoMessage").html(response.message);
         $("#recipeInfo").show();
+        $("#recipesTextArea").val("")
     });
 
     posting.fail(function(xhr) {
