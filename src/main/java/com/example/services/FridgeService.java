@@ -32,6 +32,9 @@ public class FridgeService {
         LOGGER.info("Adding items: [{}]", items);
 
         try {
+            if (items.trim().isEmpty())
+                throw new IllegalArgumentException("No items specified! ");
+
             List<FridgeItem> fridgeItems = ItemsParser.parseFridgeItems(items);
             FridgeRepository.instance().update(fridgeItems);
         } catch(IllegalArgumentException e) {

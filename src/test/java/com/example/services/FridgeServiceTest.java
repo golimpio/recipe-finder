@@ -22,6 +22,18 @@ public class FridgeServiceTest {
     }
 
     @Test(expectedExceptions = WebApplicationException.class)
+    public void addItems_shouldThrowAnException_WhenCsvIsEmpty() throws IOException {
+        service.addItems("");
+        fail("Adding items should have failed!");
+    }
+
+    @Test(expectedExceptions = WebApplicationException.class)
+    public void addItems_shouldThrowAnException_WhenCsvIsBlank() throws IOException {
+        service.addItems("   ");
+        fail("Adding items should have failed!");
+    }
+
+    @Test(expectedExceptions = WebApplicationException.class)
     public void addItems_shouldThrowAnException_WhenCsvIsInvalid() throws IOException {
         String invalidCsv = "bread,10,slices,25/12/2014\n" +
                             "cheese,10,slices,25/12/2014, unexpected-column";
