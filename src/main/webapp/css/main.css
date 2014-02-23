@@ -1,3 +1,5 @@
+/*** Bootstrap tweaks ***/
+
 body{padding-top:50px}
 #banner{border-bottom:none}
 .page-header h1{font-size:4em}
@@ -19,3 +21,20 @@ footer p{clear:left;margin-bottom:0}
 .bsa{padding:0}.bsa .one .bsa_it_ad{border:none !important;background-color:transparent !important}.bsa .one .bsa_it_ad .bsa_it_t,.bsa .one .bsa_it_ad .bsa_it_d{color:inherit !important}
 .bsa .one .bsa_it_ad .bsa_it_i{margin-bottom:0 !important}
 .bsa .one .bsa_it_p{display:none}
+
+/*** Everything else ***/
+
+a:active, a:focus { outline: none; }
+
+a.recipe-name {
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+textarea.vert { resize:vertical; }
+textarea.noResize { resize:none; }
+
+ul.no-bullets {
+  list-style: none;
+  padding-left: 1em;
+}

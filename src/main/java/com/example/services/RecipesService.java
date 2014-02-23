@@ -35,6 +35,11 @@ public class RecipesService {
             throw new WebApplicationException(Response.status(Status.BAD_REQUEST).entity(e.getMessage()).build());
         }
 
-        return ResponseHelper.getRecipe();
+        return ResponseHelper.suggestRecipe();
+    }
+
+    @GET @Path("/suggestion")
+    public RecipeResponse suggestion() {
+        return ResponseHelper.suggestRecipe();
     }
 }

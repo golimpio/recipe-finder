@@ -17,7 +17,7 @@ class ResponseHelper {
 
     private ResponseHelper() {}
 
-    public static RecipeResponse getRecipe() {
+    public static RecipeResponse suggestRecipe() {
         return FridgeRepository.instance().isEmpty() ? fridgeIsEmpty()
                 : RecipesRepository.instance().isEmpty() ? takeout()
                 : findRecipe();

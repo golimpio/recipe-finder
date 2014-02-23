@@ -17,7 +17,7 @@ final class ItemParser {
 
     public static FridgeItem parseFridgeItem(String[] columns) {
 
-        checkArgument(columns.length == 4, "Item should have exactly 4 fields: %s", Arrays.toString(columns));
+        checkArgument(columns.length == 4, "Expected 4 fields for item, instead of: [%s]", Arrays.toString(columns));
 
         return new FridgeItem(nullToEmpty(columns[0]).trim(),
                                           getAmount(nullToEmpty(columns[1]).trim()),

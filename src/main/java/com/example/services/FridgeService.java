@@ -41,6 +41,6 @@ public class FridgeService {
             throw new WebApplicationException(Response.status(Status.BAD_REQUEST).entity(e.getMessage()).build());
         }
 
-        return ResponseHelper.getRecipe();
+        return ResponseHelper.suggestRecipe();
     }
 }

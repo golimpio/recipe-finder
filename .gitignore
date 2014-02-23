@@ -5,3 +5,6 @@ build
 .project
 .settings
 .env
+.idea
+*.sublime-project
+*.sublime-workspace

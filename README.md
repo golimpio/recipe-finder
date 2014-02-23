@@ -6,18 +6,17 @@ Given a list of items in the fridge (presented as a csv list), and a collection 
 
 
 ### Input
-#### 1) Fridge CSVFormat: `item, amount, unit, use-by` 
-Where:- ￼Item (string) = the name of the ingredient – e.g. egg) - Amount (int) = the amount- Unit (enum) = the unit of measure, values:	- of (for individual items; eggs, bananas etc) 
+
+#### 1) Fridge CSVFormat: `item, amount, unit, use-by` 
+Where:- ￼Item (string) = the name of the ingredient – e.g. egg) - Amount (int) = the amount- Unit (enum) = the unit of measure, values:	- of (for individual items; eggs, bananas etc) 
 	- grams	- ml (milliliters)	- slices
 - Use-By (date) = the use by date of the ingredient (dd/mm/yy)￼￼￼￼￼￼
 E.g.
-	bread,10,slices,25/12/2014	cheese,10,slices,25/12/2014	butter,250,grams,25/12/2014	peanut butter,250,grams,2/12/2014	mixed salad,150,grams,26/12/2013
+	bread,10,slices,25/12/2014	cheese,10,slices,25/12/2014	butter,250,grams,25/12/2014	peanut butter,250,grams,2/12/2014	mixed salad,150,grams,26/12/2013
 
 
 #### 2) Recipes JSON
-Array of recipes with format specified as below:
-- ￼name : String ingredients[]- item : String amount : int - unit : enumE.g.
-	[ {	  "name": "grilled cheese on toast",	  "ingredients": [	   { "item":"bread", "amount":"2", "unit":"slices"},	   { "item":"cheese", "amount":"2", "unit":"slices"}	  ]	} , {	  "name": "salad sandwich",	  "ingredients": [	   { "item":"bread", "amount":"2", "unit":"slices"},	   { "item":"mixed salad", "amount":"100", "unit":"grams"}	  ]	} ]
+Array of recipes with format specified as below:- ￼name : String- ingredients[]	- item : String 	- amount : int 	- unit : enumE.g.	[ {	  "name": "grilled cheese on toast",	  "ingredients": [	   { "item":"bread", "amount":"2", "unit":"slices"},	   { "item":"cheese", "amount":"2", "unit":"slices"}	  ]	} , {	  "name": "salad sandwich",	  "ingredients": [	   { "item":"bread", "amount":"2", "unit":"slices"},	   { "item":"mixed salad", "amount":"100", "unit":"grams"}	  ]	} ]
 
 
 ## Application
@@ -34,6 +33,7 @@ Server:
 - [Jetty - Servlet Engine and HTTP Server](http://www.eclipse.org/jetty/)
 - [Jersey - RESTful Web Services in Java](https://jersey.java.net/)
 - [FasterXML - Jackson JAX-RS JSON Provider](https://github.com/FasterXML/jackson-jaxrs-json-provider)
+- [OpenCSV - Simple CSV parser library for Java](http://opencsv.sourceforge.net/)
 
 Test:
 
@@ -203,15 +203,13 @@ The **response** will be the same as described for the fridge service.
 
 ### Sending a file instead
 
-For example, sending fridge items from a file located at ‘*/tmp/items.txt*’
+If you have a large amount of items to send, they can be uploaded from a file. See examples below.
 
-**Request:**
+###### Sending fridge items from a file located at ‘*/tmp/items.txt*’:
 
 	curl -X POST -H "Content-Type:text/plain" --data-binary "$(</tmp/items.txt)" http://recipe-finder.herokuapp.com/services/fridge/add
 
-Sending recipes from a file located at ‘*/tmp/recipes.json*’
-
-**Request:**
+###### Sending recipes from a file located at ‘*/tmp/recipes.json*’:
 
 	curl -X POST -H "Content-Type:application/json" --data-binary "$(</tmp/recipes.json)" http://recipe-finder.herokuapp.com/services/recipes/add
 

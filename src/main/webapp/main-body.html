@@ -11,64 +11,68 @@
   <div class="row">
     <div class="col-lg-6">
       <div class="well">
-        <form class="form-horizontal" id="fridgeForm">
+        <form class="form-horizontal" id="fridge-form">
           <fieldset>
             <legend>Fridge</legend>
-            <div class="form-group">
-              <label for="fridgeTextArea" class="col-lg-2 control-label">CSV</label>
+            <div class="form-group" id="fridge-text-fg">
+              <label for="fridge-text" class="col-lg-2 control-label">CSV</label>
               <div class="col-lg-10">
-                <textarea class="form-control" rows="3" id="fridgeTextArea"></textarea>
-                <span class="help-block">Paste the CSV data to add to the fridge.</span>
+                <textarea class="form-control vert" rows="3" id="fridge-text"></textarea>
+                <span class="help-block">Please enter a valid CSV containing the list of items to add to the fridge.</span>
               </div>
             </div>
             <div class="form-group">
               <div class="col-lg-10 col-lg-offset-2">
-                <button type="Submit" class="btn btn-primary" id="loadFridgeButton" onclick="return loadFridge()">Load</button>
+                <button class="btn btn-default" id="fridge-clear" type="reset">Clear</button>
+                <button class="btn btn-default" id="fridge-sample">Sample</button>
+                <button class="btn btn-primary" id="fridge-submit">Submit</button>
               </div>
             </div>
           </fieldset>
         </form>
       </div>
-      <div class="fridgeAlert alert alert-danger" id="fridgeError" style="display:none">
-        <button type="button" class="close" onclick="$('.fridgeAlert').hide()">×</button>
-        <span id="fridgeErrorMessage" />
+      <div class="fridge-alert alert alert-danger" id="fridge-error" style="display:none">
+        <button type="button" class="close" onclick="$('.fridge-alert').hide()">×</button>
+        <span id="fridge-error-message" />
       </div>
-      <div class="fridgeAlert alert alert-success" id="fridgeInfo" style="display:none">
-        <button type="button" class="close" onclick="$('.fridgeAlert').hide()">×</button>
-        <span id="fridgeInfoMessage" />
+      <div class="fridge-alert alert alert-success" id="fridge-info" style="display:none">
+        <button type="button" class="close" onclick="$('.fridge-alert').hide()">×</button>
+        <span id="fridge-info-message" />
       </div>
-      <div class="well" id="dinnerSuggestionFridge" style="display:none"/>
+      <div class="panel panel-default" id="dinner-suggestion-fridge" style="display:none"/>
     </div>
 
     <div class="col-lg-6">
       <div class="well">
-        <form class="form-horizontal" id="recipeForm">
+        <form class="form-horizontal" id="recipe-form">
           <fieldset>
             <legend>Recipes</legend>
-            <div class="form-group">
-              <label for="recipesTextArea" class="col-lg-2 control-label">JSON</label>
+            <div class="form-group" id="recipes-text-fg">
+              <label for="recipes-text" class="col-lg-2 control-label">JSON</label>
               <div class="col-lg-10">
-                <textarea class="form-control" rows="3" id="recipesTextArea"></textarea>
-                <span class="help-block">Paste here the JSON data with recipes to store.</span>
+                <textarea class="form-control vert" rows="3" id="recipes-text"></textarea>
+                <span class="help-block">Please enter a valid JSON containing the list of recipes to be stored.</span>
               </div>
             </div>
             <div class="form-group">
               <div class="col-lg-10 col-lg-offset-2">
-                <button type="loSubmitad" class="btn btn-primary" id="loadRecipesButton" onclick="return loadRecipes()">Load</button>
+                <button class="btn btn-default" id="recipes-clear" type="reset">Clear</button>
+                <button class="btn btn-default" id="recipes-sample">Sample</button>
+                <button class="btn btn-primary" id="recipes-submit">Submit</button>
               </div>
             </div>
           </fieldset>
         </form>
       </div>
-      <div class="recipeAlert alert alert-danger" id="recipeError" style="display:none">
-        <button type="button" class="close" onclick="$('.recipeAlert').hide()">×</button>
-        <span id="recipeErrorMessage" />
+      <div class="recipe-alert alert alert-danger" id="recipe-error" style="display:none">
+        <button type="button" class="close" onclick="$('.recipe-alert').hide()">×</button>
+        <span id="recipe-error-message" />
       </div>
-      <div class="recipeAlert alert alert-success" id="recipeInfo" style="display:none">
-        <button type="button" class="close" onclick="$('.recipeAlert').hide()">×</button>
-        <span id="recipeInfoMessage" />
+      <div class="recipe-alert alert alert-success" id="recipe-info" style="display:none">
+        <button type="button" class="close" onclick="$('.recipe-alert').hide()">×</button>
+        <span id="recipe-info-message" />
       </div>
-      <div class="well" id="dinnerSuggestionrecipe" style="display:none"/>
+      <div class="panel panel-default" id="dinner-suggestion-recipe" style="display:none"/>
     </div>
   </div>
 

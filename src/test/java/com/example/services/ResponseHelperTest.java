@@ -80,17 +80,17 @@ public class ResponseHelperTest {
         FridgeRepository.instance().update(FRIDGE_ITEMS);
 
         RecipesRepository.instance().update(newArrayList(RECIPE_OK_ONE, RECIPE_OK_TWO));
-        RecipeResponse response = ResponseHelper.getRecipe();
+        RecipeResponse response = ResponseHelper.suggestRecipe();
         assertThat(response.getMessage()).containsIgnoringCase("suggestion");
         assertThat(response.getRecipe()).isEqualTo(RECIPE_OK_TWO);
 
         RecipesRepository.instance().update(newArrayList(RECIPE_OK_TWO, RECIPE_OK_THREE));
-        response = ResponseHelper.getRecipe();
+        response = ResponseHelper.suggestRecipe();
         assertThat(response.getMessage()).containsIgnoringCase("suggestion");
         assertThat(response.getRecipe()).isEqualTo(RECIPE_OK_TWO);
 
         RecipesRepository.instance().update(newArrayList(RECIPE_OK_ONE, RECIPE_UNITS_DO_NOT_MATCH));
-        response = ResponseHelper.getRecipe();
+        response = ResponseHelper.suggestRecipe();
         assertThat(response.getMessage()).containsIgnoringCase("suggestion");
         assertThat(response.getRecipe()).isEqualTo(RECIPE_OK_ONE);
     }
@@ -100,7 +100,7 @@ public class ResponseHelperTest {
         FridgeRepository.instance().update(FRIDGE_ITEMS);
 
         RecipesRepository.instance().update(newArrayList(RECIPE_PAST_USE_BY_DATE));
-        RecipeResponse response = ResponseHelper.getRecipe();
+        RecipeResponse response = ResponseHelper.suggestRecipe();
         assertThat(response.getMessage()).containsIgnoringCase("takeout");
         assertThat(response.getRecipe()).isNull();
     }
@@ -110,7 +110,7 @@ public class ResponseHelperTest {
         FridgeRepository.instance().update(FRIDGE_ITEMS);
 
         RecipesRepository.instance().update(newArrayList(RECIPE_EXCEEDING_AMOUNT_IN_THE_FRIDGE));
-        RecipeResponse response = ResponseHelper.getRecipe();
+        RecipeResponse response = ResponseHelper.suggestRecipe();
         assertThat(response.getMessage()).containsIgnoringCase("takeout");
         assertThat(response.getRecipe()).isNull();
     }
@@ -119,7 +119,7 @@ public class ResponseHelperTest {
     public void getRecipe_shouldReturnFridgeEmptyMessage_whenThereAreNoItemsOnTheFridge() {
         assertThat(FridgeRepository.instance().isEmpty()).isTrue();
 
-        RecipeResponse response = ResponseHelper.getRecipe();
+        RecipeResponse response = ResponseHelper.suggestRecipe();
         assertThat(response.getMessage()).containsIgnoringCase("fridge")
                 .containsIgnoringCase("empty");
         assertThat(response.getRecipe()).isNull();
@@ -131,7 +131,7 @@ public class ResponseHelperTest {
         assertThat(FridgeRepository.instance().isEmpty()).isFalse();
         assertThat(RecipesRepository.instance().isEmpty()).isTrue();
 
-        RecipeResponse response = ResponseHelper.getRecipe();
+        RecipeResponse response = ResponseHelper.suggestRecipe();
         assertThat(response.getMessage()).containsIgnoringCase("takeout");
         assertThat(response.getRecipe()).isNull();
     }
