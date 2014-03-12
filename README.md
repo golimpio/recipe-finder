@@ -1,5 +1,8 @@
 # Recipe Finder
 
+[![Build Status](https://travis-ci.org/golimpio/recipe-finder.png?branch=master)](https://travis-ci.org/golimpio/recipe-finder)
+
+
 ## Exercise
 
 Given a list of items in the fridge (presented as a csv list), and a collection of recipes (a collection of JSON formatted recipes), produce a recommendation for what to cook tonight.
