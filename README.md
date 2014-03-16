@@ -216,3 +216,7 @@ If you have a large amount of items to send, they can be uploaded from a file. S
 
 	curl -X POST -H "Content-Type:application/json" --data-binary "$(</tmp/recipes.json)" http://recipe-finder.herokuapp.com/services/recipes/add
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/golimpio/recipe-finder/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
