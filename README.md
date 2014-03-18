@@ -1,6 +1,7 @@
 # Recipe Finder
 
 [![Build Status](https://travis-ci.org/golimpio/recipe-finder.png?branch=master)](https://travis-ci.org/golimpio/recipe-finder)
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/golimpio/recipe-finder/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 
 ## Exercise
@@ -10,16 +11,57 @@ Given a list of items in the fridge (presented as a csv list), and a collection 
 
 ### Input
 
-#### 1) Fridge CSVFormat: `item, amount, unit, use-by` 
-Where:- ￼Item (string) = the name of the ingredient – e.g. egg) - Amount (int) = the amount- Unit (enum) = the unit of measure, values:	- of (for individual items; eggs, bananas etc) 
-	- grams	- ml (milliliters)	- slices
-- Use-By (date) = the use by date of the ingredient (dd/mm/yy)￼￼￼￼￼￼
-E.g.
-	bread,10,slices,25/12/2014	cheese,10,slices,25/12/2014	butter,250,grams,25/12/2014	peanut butter,250,grams,2/12/2014	mixed salad,150,grams,26/12/2013
+
+#### 1) Fridge CSV
+
+Format: `item, amount, unit, use-by` 
+
+Where:
+
+- ￼Item (string) = the name of the ingredient – e.g. egg) 
+- Amount (int) = the amount
+- Unit (enum) = the unit of measure, values:
+	- of (for individual items; eggs, bananas etc) 
+	- grams
+	- ml (milliliters)
+	- slices
+- Use-By (date) = the use by date of the ingredient (dd/mm/yy)
+￼￼￼￼￼￼
+
+E.g.
+
+	bread,10,slices,25/12/2014
+	cheese,10,slices,25/12/2014
+	butter,250,grams,25/12/2014
+	peanut butter,250,grams,2/12/2014
+	mixed salad,150,grams,26/12/2013
 
 
 #### 2) Recipes JSON
-Array of recipes with format specified as below:- ￼name : String- ingredients[]	- item : String 	- amount : int 	- unit : enumE.g.	[ {	  "name": "grilled cheese on toast",	  "ingredients": [	   { "item":"bread", "amount":"2", "unit":"slices"},	   { "item":"cheese", "amount":"2", "unit":"slices"}	  ]	} , {	  "name": "salad sandwich",	  "ingredients": [	   { "item":"bread", "amount":"2", "unit":"slices"},	   { "item":"mixed salad", "amount":"100", "unit":"grams"}	  ]	} ]
+
+Array of recipes with format specified as below:
+
+- ￼name : String
+- ingredients[]
+	- item : String 
+	- amount : int 
+	- unit : enum
+
+E.g.
+
+	[ {
+	  "name": "grilled cheese on toast",
+	  "ingredients": [
+	   { "item":"bread", "amount":"2", "unit":"slices"},
+	   { "item":"cheese", "amount":"2", "unit":"slices"}
+	  ]
+	} , {
+	  "name": "salad sandwich",
+	  "ingredients": [
+	   { "item":"bread", "amount":"2", "unit":"slices"},
+	   { "item":"mixed salad", "amount":"100", "unit":"grams"}
+	  ]
+	} ]
 
 
 ## Application
@@ -216,7 +258,4 @@ If you have a large amount of items to send, they can be uploaded from a file. S
 
 	curl -X POST -H "Content-Type:application/json" --data-binary "$(</tmp/recipes.json)" http://recipe-finder.herokuapp.com/services/recipes/add
 
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/golimpio/recipe-finder/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
