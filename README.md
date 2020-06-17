@@ -1,7 +1,6 @@
 # Recipe Finder
 
 [![Build Status](https://travis-ci.org/golimpio/recipe-finder.png?branch=master)](https://travis-ci.org/golimpio/recipe-finder)
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/golimpio/recipe-finder/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 
 ## Exercise
